@@ -72,19 +72,18 @@ function executeWork(employee: Director | Teacher): string {
 console.log(executeWork(createEmployee(200)));  // Getting to work
 console.log(executeWork(createEmployee(1000))); // Getting to director tasks
 
-// ---------------- Task 7 ----------------
-
 // String literal type for subjects
-type Subjects = 'Math' | 'History';
+export type Subjects = 'Math' | 'History';
 
 // Function to teach class
-function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass: Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   } else {
     return 'Teaching History';
   }
 }
+
 
 // Example usage
 console.log(teachClass('Math'));     // Teaching Math
