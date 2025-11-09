@@ -1,20 +1,20 @@
 // task_1/js/main.ts
 
-// Task 1: Define the Teacher interface
+// Task 1: Define Teacher interface
 interface Teacher {
-  readonly firstName: string;   // Only modifiable on initialization
-  readonly lastName: string;    // Only modifiable on initialization
-  fullTimeEmployee: boolean;    // Always defined
-  yearsOfExperience?: number;   // Optional
-  location: string;             // Always defined
-  [key: string]: any;           // Allow additional properties
+  readonly firstName: string;   // only modifiable on initialization
+  readonly lastName: string;    // only modifiable on initialization
+  fullTimeEmployee: boolean;    // always defined
+  yearsOfExperience?: number;   // optional
+  location: string;             // always defined
+  [key: string]: any;           // allow additional properties
 }
 
 // Example for Teacher
 const teacher3: Teacher = {
   firstName: 'John',
-  lastName: 'Doe',
   fullTimeEmployee: false,
+  lastName: 'Doe',
   location: 'London',
   contract: false,
 };
@@ -23,9 +23,9 @@ console.log(teacher3);
 
 // ------------------------------------------------------------
 
-// Task 2: Define Director interface extending Teacher
+// Task 2: Director interface extending Teacher
 interface Director extends Teacher {
-  numberOfReports: number; // Mandatory for Director
+  numberOfReports: number;
 }
 
 // Example for Director
@@ -46,10 +46,10 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implement printTeacher function
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+// Implement printTeacher as a named function
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0]}. ${lastName}`;
+}
 
 // Example usage
-console.log(printTeacher("John", "Doe")); // Output: J. Doe
+console.log(printTeacher('John', 'Doe')); // Output: J. Doe
