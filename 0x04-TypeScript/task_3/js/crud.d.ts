@@ -2,6 +2,7 @@
 
 import { RowID, RowElement } from './interface';
 
-declare function insertRow(row: RowElement): RowID;
-declare function updateRow(rowId: RowID, row: RowElement): RowID;
-declare function deleteRow(rowId: RowID): void;
+// Ambient declarations of the CRUD functions
+export declare function insertRow(row: RowElement): RowID;
+export declare function updateRow(rowId: RowID, row: RowElement): RowID;
+export declare function deleteRow(rowId: RowID): void;
