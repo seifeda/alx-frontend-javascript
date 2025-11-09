@@ -23,13 +23,13 @@ console.log(teacher3);
 
 // ------------------------------------------------------------
 
-// Task 2: Define Directors interface extending Teacher
-interface Directors extends Teacher {
-  numberOfReports: number; // Mandatory for Directors
+// Task 2: Define Director interface extending Teacher
+interface Director extends Teacher {
+  numberOfReports: number; // Mandatory for Director
 }
 
-// Example for Directors
-const director1: Directors = {
+// Example for Director
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
