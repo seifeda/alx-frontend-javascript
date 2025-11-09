@@ -10,11 +10,11 @@ interface Teacher {
   [key: string]: any;           // allow additional properties
 }
 
-// Example for Teacher
+// Example Teacher
 const teacher3: Teacher = {
   firstName: 'John',
-  fullTimeEmployee: false,
   lastName: 'Doe',
+  fullTimeEmployee: false,
   location: 'London',
   contract: false,
 };
@@ -28,7 +28,7 @@ interface Director extends Teacher {
   numberOfReports: number;
 }
 
-// Example for Director
+// Example Director
 const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
@@ -41,15 +41,15 @@ console.log(director1);
 
 // ------------------------------------------------------------
 
-// Task 3: Define printTeacherFunction interface
+// Task 3: printTeacher function + interface
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implement printTeacher as a named function
-function printTeacher(firstName: string, lastName: string): string {
+// Function with destructured parameters
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
 // Example usage
-console.log(printTeacher('John', 'Doe')); // Output: J. Doe
+console.log(printTeacher({ firstName: 'John', lastName: 'Doe' }));
