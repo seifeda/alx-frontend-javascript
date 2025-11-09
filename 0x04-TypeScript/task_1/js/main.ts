@@ -48,7 +48,7 @@ interface printTeacherFunction {
 
 // Function with destructured parameters
 function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstName[0]}. ${lastName}`;
+  return `${firstName}. ${lastName}`;
 }
 
 // Example usage
